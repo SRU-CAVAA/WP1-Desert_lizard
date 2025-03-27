@@ -18,7 +18,7 @@ parameters.read(ws_path + '/src/config.ini')
 
 #########################
 # Data gathering node functionalities
-# data_classes = [Simulation_time, Gradient_Temp, X, Y, Z, Internal_states, Attractor_output, ]
+# data_classes = [Trial_number, Trial_time, Gradient_T, X, Y, Z, IS_temperature, IS_hydration, IS_energy, IS_security, IS_mating, Att_temperature, Att_hydration, Att_energy, Att_security, Att_mating]
 
 
 

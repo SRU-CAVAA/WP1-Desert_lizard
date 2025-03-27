@@ -16,11 +16,10 @@ parameters = configparser.ConfigParser()
 parameters.read(ws_path + '/src/config.ini')
 
 #########################
-# Robot Navigation node
-# - 
-# - 
-# - 
-# - 
+# Robot Navigation node. This nodes send the motors commands to the allostatic agent based on:
+# - Allostatic model outputs.
+# - An obstacle-avoidance mechanisms.
+
 
 class Robot_Navigation(Node):
     def __init__(self):

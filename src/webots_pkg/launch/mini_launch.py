@@ -105,7 +105,7 @@ def generate_launch_description():
         webots._supervisor,
         epuck_agent,
         epuck_predator,
-        epuck_peer, #allostatic_model_node, gradients_node, navigation_node,
+        epuck_peer,
         launch.actions.RegisterEventHandler(
             event_handler=launch.event_handlers.OnProcessExit(
                 target_action=webots,

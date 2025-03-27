@@ -57,6 +57,11 @@ class Allostatic_model(Node):
         self.homeo_bonus = float(parameters.get('Allostatic_Model', 'homeo_bonus'))
 
         self.att_amplifier = int(parameters.get('Allostatic_Model', 'att_amplifier'))
+        self.temperature_priority = float(parameters.get('Allostatic_Model', 'temperature_priority'))
+        self.thirst_priority = float(parameters.get('Allostatic_Model', 'thirst_priority'))
+        self.food_priority = float(parameters.get('Allostatic_Model', 'food_priority'))
+        self.security_priority = float(parameters.get('Allostatic_Model', 'security_priority'))
+        self.peer_priority = float(parameters.get('Allostatic_Model', 'peer_priority'))
 
 
         self.multiattractor = Multiattractor()
@@ -293,11 +298,11 @@ class Allostatic_model(Node):
 
 
     def attractor_dynamics(self):
-        self.Itemp_attractor *= self.att_amplifier
-        self.Ithi_attractor *= self.att_amplifier
-        self.Ifood_attractor *= self.att_amplifier
-        self.Ipeer_attractor *= self.att_amplifier
-        self.Ipredator_attractor *= self.att_amplifier * 2
+        self.Itemp_attractor *= self.att_amplifier * self.temperature_priority
+        self.Ithi_attractor *= self.att_amplifier * self.thirst_priority
+        self.Ifood_attractor *= self.att_amplifier * self.food_priority
+        self.Ipeer_attractor *= self.att_amplifier * self.peer_priority
+        self.Ipredator_attractor *= self.att_amplifier * self.security_priority
         self.total_force_temperature, self.total_force_thirst, self.total_force_food, self.total_force_peer, self.total_force_predator  = self.multiattractor.advance(self.Itemp_attractor, self.Ithi_attractor, self.Ifood_attractor, self.Ipeer_attractor, self.Ipredator_attractor)
 
         att_outputs = [self.total_force_temperature, self.total_force_thirst, self.total_force_food, self.total_force_predator, self.total_force_peer]

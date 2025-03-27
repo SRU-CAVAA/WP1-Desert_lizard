@@ -4,19 +4,39 @@ From weaving spiders to hibernating mammals and migratory birds, nature presents
 
 ## Repository
 
+This repository includes the source code for replicating the self-regulatory behavior of a desert lizard. Preeliminary results were showcased at IROS2023 as part of the workshop [Learning Robot Super Autonomy](https://wp.nyu.edu/workshopiros2023superautonomy/).
 
-This repository includes the source code for the IROS2023 manuscript 'Enabling robot autonomy through biomimetic self-regulatory dynamics', part of the workshop [Learning Robot Super Autonomy](https://wp.nyu.edu/workshopiros2023superautonomy/).
+Full paper is intended to be submitted at [ALIFE 2025 conference](https://2025.alife.org/).
 
 
-The repository is specifically design to be run on a Windows-WSL(Ubuntu22.04) environment with [ROS2(iron)](https://docs.ros.org/en/iron/index.html). The simulation requires the installation [Webotst](https://cyberbotics.com/) + the [webots_ros2 package](https://github.com/cyberbotics/webots_ros2).
+## Installation
+
+The repository is being developed in a Windows-WSL(Ubuntu22.04) environment with [ROS2(iron)](https://docs.ros.org/en/iron/index.html). For a fast and easy Windows-WSL installation, do not hesitate to contact Oscar Guerrero Rosado (oscar.guerrerorosado@donders.ru.nl) and he will provide you with the WSL image.
+
+For your own installation in Ubuntu, the simulation requires the installation [Webotst](https://cyberbotics.com/) + the [webots_ros2 package](https://github.com/cyberbotics/webots_ros2).
 
 
 ## Getting started
 
-Follow the following steps to run the experiment:
 1. Build the repository as a ROS2 workspace
 2. source install/local_setup.bash every terminal you open.
-3. ros2 launch webots_pkg epuck_launch.py
-4. ros2 run pseudo_supervisor pseudo_supervisor
-5. ros2 run webots_pkg random_walker
 
+After building and sourcing your ROS2 workspace. You can either run the full launch file
+
+3. a) ros2 launch webots_pkg full_launch.py
+
+Or you can run each node separately.
+
+3. b) ros2 launch webots_pkg mine_launch.py
+
+4. ros2 run webots_pkg gradients
+5. ros2 run webots_pkg allostatic_model
+6. ros2 run webots_pkg robot_navigation
+7. ros2 run webots_pkg data_gathering
+8. ros2 run webots_pkg supervisor
+
+
+
+## Experiment parameters
+
+To define the value of the different experiment's parameters, edit the config.ini file.
