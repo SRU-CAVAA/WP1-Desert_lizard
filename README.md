@@ -27,7 +27,7 @@ After building and sourcing your ROS2 workspace. You can either run the full lau
 
 Or you can run each node separately.
 
-3. b) ros2 launch webots_pkg mine_launch.py
+3. b) ros2 launch webots_pkg mini_launch.py
 
 4. ros2 run webots_pkg gradients
 5. ros2 run webots_pkg allostatic_model
