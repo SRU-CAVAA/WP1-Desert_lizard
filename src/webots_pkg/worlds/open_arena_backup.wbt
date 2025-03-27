@@ -1,0 +1,88 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/objects/floors/protos/RectangleArena.proto"
+
+IMPORTABLE EXTERNPROTO "../protos/E-puck.proto"
+IMPORTABLE EXTERNPROTO "../protos/E-puck_predator.proto"
+IMPORTABLE EXTERNPROTO "../protos/E-puck_peer.proto"
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/Parquetry.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2022b/projects/appearances/protos/BrushedAluminium.proto"
+IMPORTABLE EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/fruits/protos/Apple.proto"
+IMPORTABLE EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/drinks/protos/WaterBottle.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.33 0.35 0.9 1.7
+  position 0 -3 2.55
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 3.5 3.5
+  floorTileSize 0.25 0.25
+  floorAppearance Parquetry {
+    type "light strip"
+  }
+  wallHeight 0.15
+  wallAppearance BrushedAluminium {
+    colorOverride 0.8 0.6 0.4
+    IBLStrength 7
+  }
+}
+
+DEF my_epuck E-puck {
+  translation 0 0 0.000530904
+  rotation -0.0006621718490524418 0.0001320789698915047 0.9999997720417682 1.5707996938995747
+  name "my_epuck"
+  controller "<extern>"
+  camera_width 320
+  camera_height 240
+  distance_sensor_numberOfRays 3
+  receiver_channel -1
+  turretSlot [
+    Compass {
+    }
+    GPS {
+    }
+  ]
+}
+DEF epuck_predator E-puck_predator {
+  translation 1 0 0.000530904
+  rotation -0.0006621718490524418 0.0001320789698915047 0.9999997720417682 1.5707996938995747
+  name "epuck_predator"
+  controller "<extern>"
+  distance_sensor_numberOfRays 3
+  receiver_channel -1
+  turretSlot [
+    Compass {
+    }
+    GPS {
+    }
+  ]
+}
+DEF epuck_peer E-puck_peer {
+  translation -1 0 0.000530904
+  rotation -0.0006621718490524418 0.0001320789698915047 0.9999997720417682 1.5707996938995747
+  name "epuck_peer"
+  controller "<extern>"
+  distance_sensor_numberOfRays 3
+  receiver_channel -1
+  turretSlot [
+    Compass {
+    }
+    GPS {
+    }
+  ]
+}
+Apple {
+  translation -0.95 0.95 0.05
+}
+WaterBottle {
+  translation 0.95 0.95 0
+}

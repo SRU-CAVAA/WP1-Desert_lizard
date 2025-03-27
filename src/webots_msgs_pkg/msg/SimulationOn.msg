@@ -1,0 +1,1 @@
+bool		simulation_running
