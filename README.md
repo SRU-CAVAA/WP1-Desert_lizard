@@ -1,6 +1,6 @@
 # Enabling robot autonomy through self-regulatory dynamics
 
-## 🦎🤖 Abstract
+## 🦎 Abstract
 
 From weaving spiders to hibernating mammals and migratory birds, nature presents numerous examples of organisms exhibiting extraordinary autonomous behaviors that ensure their self-maintenance. However, physiological needs often interact and compete with each other, which demands super-autonomous organisms to orchestrate them as a complex set of internal needs rather than as isolated subsystems. This paper presents a synthetic agent equipped with a brain-based neural mass model replicating fundamental self-regulatory behaviors observed in desert lizards. Our results show this agent not only autonomously regulates its internal temperature by navigating to areas with optimal environmental conditions but also harmonizes this process with other internal needs, such as energy, hydration, security, and mating. Using game theory metrics, we observe that such a biomimetic agent outperforms an interoceptive-agnostic agent in efficiency, fairness, and stability. Together, our results suggest that grounding robot behavior in biological processes of self-regulation provides an excellent approach for addressing trade-off situations in the physical deployments of autonomous robots.
 
