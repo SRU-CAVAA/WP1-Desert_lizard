@@ -1,4 +1,4 @@
-# Enabling robot autonomy through self-regulatory dynamics
+# Enabling Biomimetic Self-Regulation in Intrinsically Motivated Robots
 
 ## 🦎 Abstract
 
@@ -8,7 +8,7 @@ From weaving spiders to hibernating mammals and migratory birds, nature presents
 
 This repository includes the source code for replicating the self-regulatory behavior of a desert lizard. Preliminary results were showcased at IROS2023 as part of the workshop [Learning Robot Super Autonomy](https://wp.nyu.edu/workshopiros2023superautonomy/).
 
-Full paper is intended to be submitted at [ALIFE 2025 conference](https://2025.alife.org/).
+Full paper has been submitted to [ALIFE 2025 conference](https://2025.alife.org/) and uploaded to [bioRxiv](https://www.biorxiv.org/content/10.1101/2025.05.11.653305v1.abstract)
 
 ### 🧩 Components
 
